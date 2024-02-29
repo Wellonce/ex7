@@ -1,0 +1,13 @@
+
+    <h3>Update product</h3>
+    <form method="post" enctype="multipart/form-data" action="{% url 'update-page' pk=product.pk %}>
+    <div class="row">
+       <div class="col-5">
+           {% csrf_token %}
+           {{ form.as_p }}
+           <button class="btn btn-primary">update</button>
+       </div>
+
+    </div>
+
+    </form>
